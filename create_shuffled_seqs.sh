@@ -1,5 +1,7 @@
 #!/bin/sh
 
+mkfifo read1
+mkfifo read2
 gunzip -c H01391-L1_S6_L003_R1_001.fastq.gz > read1 &
 gunzip -c H01391-L1_S6_L003_R2_001.fastq.gz > read2 &
 shuffleSequences_fastq.pl read1 read2 H01391-L1_S6_L003_shuffled.fastq
