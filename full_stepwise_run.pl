@@ -10,6 +10,8 @@ my $base = "/media/roger/Hanna/Kaki";
 my $tmpdir = "/media/roger/RAM";
 my $genome = "/media/roger/Hanna/Kaki/genome/superscaffolds.fasta";
 my $mapper = "/home/roger/Downloads/NextGenMap-0.5.5/bin/ngm-0.5.5/ngm-core -r $genome -t 14 -g 0,1  --no-unal -n 1 --strata 1 --no-progress";
+# Do not use silent clip on NextGenMap or it'll screw up the output later on with samtools!
+# You'll end up with truncated data.
 my $trimmer = "skewer -m pe -q 30 -Q 20 -l 54 -t 12 --quiet";
 my $genome_size = 1300000000;
 my $coverage = 4;
