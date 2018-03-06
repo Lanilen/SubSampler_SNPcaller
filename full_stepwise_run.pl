@@ -42,7 +42,7 @@ for my $current_rep (1..$reps) {
 	$sysline = "rm $tmpdir/read1.fq $tmpdir/read2.fq";
 	&exeme($sysline);
 	
-	$sysline = "$mapper -1 $tmpdir/read1-trimmed-pair1.fastq -2 $tmpdir/read1-trimmed-pair1.fastq -o $tmpdir/$file.sam";
+	$sysline = "$mapper -1 $tmpdir/read1-trimmed-pair1.fastq -2 $tmpdir/read1-trimmed-pair2.fastq -o $tmpdir/$file.sam";
 	&exeme($sysline);
 
 	$sysline = "samtools view -bS -@ 12 $tmpdir/$file.sam > $tmpdir/$file.bam";
