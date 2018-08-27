@@ -18,3 +18,7 @@ Steps:
 7. batch_bcf_call.sh + conversion_subtrimmed_tasks.txt : SLURM task list that does the finall SNP calling. It will convert the format of the sam files into bam, index them, then use mpileup to create the raw BCF files. Further filtering in these BCF files is recommended, but it'll be to user's taste. I use BCF instead of VCF just to save one conversion step when loading them into bcftools, but it's essentially the same.
 
 The bcf files have been uploaded to the Dropbox (link via e-mail).
+
+Additinal script(s):
+
+1. subsample_fastq_dir.pl: A perl script that will take a directory full of fastq files and batch-subsample them to a certain percentage based on used input.
