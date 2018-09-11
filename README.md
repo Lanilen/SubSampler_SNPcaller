@@ -22,3 +22,4 @@ The bcf files have been uploaded to the Dropbox (link via e-mail).
 Additinal script(s):
 
 1. subsample_fastq_dir.pl: A perl script that will take a directory full of fastq files and batch-subsample them to a certain percentage based on used input.
+2. split_bamfiles_tasks.pl: This script will take a list of BAM files and a genome, and split those bamfiles into N user-defined non-overlapping alignments. The idea for this is to create subsets of BAM files that can be independently run through mpileup before doing SNP calling with bcftools. Because mpileup doesn't run in parallel, this will do the job. The output is a list of samtools tasks that can be sent to your favourite queue manager.
