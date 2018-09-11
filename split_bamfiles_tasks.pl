@@ -29,7 +29,7 @@ pieces, or you'll end up with a HUGE list of tasks)
 
  Alternatively, if all you have is ONE sequence, you'll have to split along
 the sequence itself, in that case use -B to create a bed file with
-overlapping chunks of (genome length/n) length.
+NON-overlapping chunks of (genome length/n) length.
 
  The output of this whole exercise will be a list of samtools tasks to split
 the bamfiles into smaller chunks. Once that is done, all you need to do is run
