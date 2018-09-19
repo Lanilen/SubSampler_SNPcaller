@@ -123,7 +123,7 @@ elsif ($opt_B) {
 	    $end = $bases{$name};
 	}
     } while ($end < $bases{$name});
-    open (WRITE, ">$counter.bed");
+    open (WRITE, ">$opt_o/$counter.bed");
     print WRITE "$name\t$start\t$end\n";
     close WRITE;
     push (@bedfiles, "$counter.bed");
